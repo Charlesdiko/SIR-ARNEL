@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Grade 12 Aphrodite | Classroom Guidelines</title>
+
+<meta name="description" content="Grade 12 Aphrodite classroom guidelines and student conduct policies.">
+<meta name="keywords" content="classroom rules, student conduct, school policies, discipline, behavior">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+min-height:100vh;
+background:url("i.jpg") center/cover no-repeat fixed;
+display:flex;
+flex-direction:column;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:linear-gradient(120deg,rgba(0,0,0,.75),rgba(0,0,0,.6));
+z-index:-1;
+}
+
+header{
+padding:30px 20px;
+text-align:center;
+color:white;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(6px);
+}
+
+header h1{
+font-size:42px;
+letter-spacing:1px;
+}
+
+.nav{
+margin-top:12px;
+}
+
+.nav a{
+color:white;
+text-decoration:none;
+margin:0 18px;
+font-size:22px;
+padding-bottom:4px;
+border-bottom:2px solid transparent;
+transition:.3s;
+}
+
+.nav a:hover{
+color:#ffd700;
+border-color:#ffd700;
+}
+
+main{
+width:100%;
+max-width:1100px;
+margin:40px auto;
+padding:20px;
+}
+
+.section-title{
+text-align:center;
+color:white;
+font-size:36px;
+margin-bottom:35px;
+}
+
+.rules-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.rule-card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
+border-radius:18px;
+padding:30px 25px;
+text-align:center;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+transition:.35s;
+}
+
+.rule-card:hover{
+transform:translateY(-10px) scale(1.02);
+background:rgba(255,255,255,.22);
+}
+
+.icon-box{
+width:70px;
+height:70px;
+margin:0 auto 18px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+background:linear-gradient(135deg,#ffd700,#ff9f00);
+color:black;
+box-shadow:0 0 12px rgba(255,215,0,.7);
+}
+
+.rule-card h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.rule-card p{
+font-size:17px;
+line-height:1.4;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Grade 12 Aphrodite Classroom Guidelines</h1>
+
+<div class="nav">
+<a href="rules.html">Rules</a>
+<a href="classofficers.html">Officers</a>
+<a href="weeklyreminders.html">Reminders</a>
+</div>
+</header>
+
+<main>
+<div class="rules-grid">
+
+<div class="rule-card">
+<div class="icon-box">🎯</div>
+<h3>Prepared to Learn</h3>
+<p>Come to class with complete materials and a focused mindset.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">⏳</div>
+<h3>Value Time</h3>
+<p>Enter and leave the classroom at the proper time.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🧍‍♂️🧍‍♀️</div>
+<h3>Positive Behavior</h3>
+<p>Practice kindness and good manners at all times.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🪑</div>
+<h3>Orderly Environment</h3>
+<p>Arrange chairs, desks, and belongings properly.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🔇</div>
+<h3>Maintain Silence</h3>
+<p>Avoid unnecessary noise during discussions.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">📱</div>
+<h3>Device Control</h3>
+<p>Use gadgets only when permitted by the teacher.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🛑</div>
+<h3>Follow Instructions</h3>
+<p>Listen carefully and obey classroom directions.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🧠</div>
+<h3>Academic Integrity</h3>
+<p>Submit original and honest work.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🧾</div>
+<h3>Task Responsibility</h3>
+<p>Complete activities and submit on time.</p>
+</div>
+
+<div class="rule-card">
+<div class="icon-box">🤲</div>
+<h3>Care for Others</h3>
+<p>Help maintain a safe and friendly classroom.</p>
+</div>
+
+</div>
+</main>
+
+   <script>
+(function autoRotatePages() {
+
+    const pages = [
+        "rules.html",
+        "classofficers.html",
+        "weeklyreminders.html"
+    ];
+
+    const displayTime = 5000; // 5 seconds
+
+    function getCurrentPage() {
+        const path = window.location.pathname;
+        const fileName = path.substring(path.lastIndexOf("/") + 1);
+        return fileName || "rules.html"; // fallback default
+    }
+
+    function getNextPage(currentPage) {
+        const index = pages.indexOf(currentPage);
+
+        if (index === -1) {
+            return pages[0]; // fallback if not found
+        }
+
+        return pages[(index + 1) % pages.length];
+    }
+
+    function startRotation() {
+        const currentPage = getCurrentPage();
+        const nextPage = getNextPage(currentPage);
+
+        setTimeout(() => {
+            window.location.href = nextPage;
+        }, displayTime);
+    }
+
+    startRotation();
+
+})();
+</script> 
+  
+</body>
+</html>
